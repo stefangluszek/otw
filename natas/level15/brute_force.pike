@@ -4,7 +4,7 @@ final constant url = "http://natas15.natas.labs.overthewire.org/index.php";
 mapping headers = ([
     "Authorization": "Basic bmF0YXMxNTpBd1dqMHc1Y3Z4clppT05nWjlKNXN0TlZrbXhkazM5Sg==",
 ]);
-final constant letters = "abcdefghijklmnopqrstuwxyz";
+final constant letters = "abcdefghijklmnopqrstuvwxyz";
 final constant numbers = "1234567890";
 string all_chars = upper_case(letters) + letters + numbers;
 
@@ -14,11 +14,6 @@ bool exists(mapping vars)
     if (search(raw, "This user exists") < 0)
         return false;
     return true;
-}
-
-bool check(string a)
-{
-    return 1;
 }
 
 string find_letter(string haystack, string prefix)
